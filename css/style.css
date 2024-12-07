@@ -93,7 +93,7 @@ body {
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: space-between;
     margin: 4.8rem 0;
 }
 
@@ -107,22 +107,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-}
-
-/* About section styles */
-.hero {
-    display: flex;
-    align-items: center;
-    /* background-image: linear-gradient(45deg, #363D73, #2794B3); */
-    justify-content: space-between;
-    width: 100%;
-    min-height: 100vh;
-}
-
-.hero .hero-text {
-    width: 450px;
-    color: var(--main-text-color);
-    padding: 5rem 1rem 5rem 5rem;
 }
 
 .hero .hero-image img {
