@@ -109,6 +109,27 @@ body {
     justify-content: space-evenly;
 }
 
+/* About section styles */
+.hero {
+    display: flex;
+    align-items: center;
+    /* background-image: linear-gradient(45deg, #363D73, #2794B3); */
+    justify-content: space-between;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.hero .hero-text {
+    width: 450px;
+    color: var(--main-text-color);
+    padding: 5rem 1rem 5rem 5rem;
+}
+
+.hero .hero-image img {
+    height: 400px;
+    padding: 5rem 5rem 5rem 1rem;
+}
+
 @media screen and (min-width: 856px) and (max-width: 1024px) {
     .menu-list .menu-list-items {
         padding: 0.5rem 0.3rem;
@@ -316,7 +337,6 @@ body {
 .common-btn {
     font-family: "roboto mono", monospace;
     font-size: 0.9em;
-    margin-right: 2em;
     padding: 5px;
     border: 2px solid var(--main-btn-border-color);
     box-shadow: 5px 5px 0px 2px var(--main-btn-border-color);
@@ -334,7 +354,6 @@ body {
 .ghost-btn {
     font-family: "roboto mono", monospace;
     font-size: 0.9em;
-    margin-right: 2em;
     padding: 5px;
     border: 2px solid var(--main-btn-border-color);
     box-shadow: 5px 5px 0px 2px var(--main-btn-border-color);
