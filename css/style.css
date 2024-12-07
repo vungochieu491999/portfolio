@@ -1,3 +1,14 @@
+:root {
+    --main-theme-color: #404e4a;
+    --main-text-color: #201e1e;
+    --main-text-title-color: #201e1e;
+    --main-text-desc-color: #201e1e;
+    --main-btn-bg-color: #999393;
+    --main-btn-border-color: #413d3d;
+    --main-btn-borderhov-color: #9b9696;
+    --main-btn-texthov-color: #404e4a;
+}
+
 /* Styles defined for the desktop or the bigger screen devices*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
@@ -6,6 +17,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    background-color: var(--main-theme-color);
 }
 
 /* Header Navbar Styles */
@@ -16,8 +28,6 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background-image: linear-gradient(90deg, #404e4a, #545858, #657774);
-    background-color: transparent;
 }
 
 .logo {
@@ -25,7 +35,7 @@ body {
 }
 
 .logo .logo-heading {
-    color: #fff;
+    color: var(--main-text-title-color);
 }
 
 .menu {
@@ -34,7 +44,7 @@ body {
 
 .hamburger {
     display: none;
-    color: #fff;
+    color: var(--main-text-title-color);
     font-size: 25px;
 }
 
@@ -51,17 +61,34 @@ body {
     padding: 0.5rem 1rem;
 }
 
-@media screen and (min-width: 856px) and (max-width: 1024px) {
-    .menu-list .menu-list-items {
-        padding: 0.5rem 0.3rem;
-    }
+.menu-list .menu-list-items .links {
+    font-family: "roboto mono", monospace;
+    font-size: 0.9em;
+    margin-right: 2em;
+    padding: 5px;
+    border: 2px solid var(--main-btn-border-color);
+    box-shadow: 5px 5px 0px 2px var(--main-btn-border-color);
+    white-space: nowrap;
+}
+
+.menu-list .menu-list-items .links:hover {
+    border: 2px solid var(--main-btn-borderhov-color);
+    color: var(--main-btn-texthov-color);
+    background-color: var(--main-btn-bg-color);
+    box-shadow: 0px 0px 0px 0px;
+    transition: all 0.2s;
+}
+
+.links {
+    border-bottom: 2px solid transparent;
+    transition: all 0.25s;
+    padding: 5px;
+    text-decoration: none;
+    color: #fff;
 }
 
 /* Main Hero Section Styles */
 .hero {
-    background-image: url('./Images/heroImg3.avif');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -82,18 +109,25 @@ body {
     justify-content: space-evenly;
 }
 
+@media screen and (min-width: 856px) and (max-width: 1024px) {
+    .menu-list .menu-list-items {
+        padding: 0.5rem 0.3rem;
+    }
+}
+
 /* About section styles */
 .about {
     display: flex;
     align-items: center;
-    background-image: linear-gradient(45deg, #363D73, #2794B3);
+    /* background-image: linear-gradient(45deg, #363D73, #2794B3); */
     justify-content: space-between;
     width: 100%;
+    min-height: 100vh;
 }
 
 .about .about-text {
     width: 450px;
-    color: #fff;
+    color: var(--main-text-color);
     padding: 5rem 1rem 5rem 5rem;
 }
 
@@ -247,77 +281,72 @@ body {
     list-style: none;
 }
 
-
-
-
-
-
 /* utility classes */
 .greet-heading {
     font-size: 1.3rem;
     font-weight: lighter;
     margin: 0;
+    color: var(--main-text-color);
     letter-spacing: 1px;
 }
 
 .my-heading {
     font-size: 2.5rem;
     margin: 0;
+    color: var(--main-text-color);
 }
 
 .sub-heading {
+    padding-top: 2rem;
     margin: 0;
     font-size: 0.8rem;
-    color: #ccc;
+    color: var(--main-text-color);
     font-weight: lighter;
-}
-
-.links:hover {
-    border-bottom: 2px solid #fff;
-}
-
-.links {
-    border-bottom: 2px solid transparent;
-    transition: all 0.25s;
-    padding: 5px;
-    text-decoration: none;
-    color: #fff;
 }
 
 .btn {
     padding: 10px 20px;
-    border-radius: 5px;
     cursor: pointer;
     letter-spacing: 1px;
     border: none;
+    text-decoration: none;
+    color: #fff;
 }
 
 .common-btn {
-    background-color: #657774;
-    color: #fff;
-    border: 2px solid #657774;
+    font-family: "roboto mono", monospace;
+    font-size: 0.9em;
+    margin-right: 2em;
+    padding: 5px;
+    border: 2px solid var(--main-btn-border-color);
+    box-shadow: 5px 5px 0px 2px var(--main-btn-border-color);
+    white-space: nowrap;
     transition: all 0.25s;
 }
 
 .common-btn:hover {
-    background-color: #fff;
-    color: #657774;
-    border: 2px solid #657774;
-    outline: none;
+    border: 2px solid var(--main-btn-borderhov-color);
+    color: var(--main-btn-texthov-color);
+    background-color: var(--main-btn-bg-color);
+    box-shadow: 0px 0px 0px 0px;
 }
 
 .ghost-btn {
-    background-color: #fff;
-    color: #657774;
-    border: 2px solid #657774;
-    outline: none;
+    font-family: "roboto mono", monospace;
+    font-size: 0.9em;
+    margin-right: 2em;
+    padding: 5px;
+    border: 2px solid var(--main-btn-border-color);
+    box-shadow: 5px 5px 0px 2px var(--main-btn-border-color);
+    white-space: nowrap;
+    transition: all 0.25s;
 }
 
 .ghost-btn:hover {
-    background-color: #657774;
-    color: #fff;
-    transition: all 0.25s;
-    border: 2px solid #657774;
+    border: 2px solid var(--main-btn-borderhov-color);
+    color: var(--main-btn-texthov-color);
+    background-color: var(--main-btn-bg-color);
+    box-shadow: 0px 0px 0px 0px;
 }
 
 .heading-span {
