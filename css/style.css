@@ -131,7 +131,7 @@ body {
 }
 
 /* About section styles */
-.about {
+.section-wrap {
     display: flex;
     align-items: center;
     /* background-image: linear-gradient(45deg, #363D73, #2794B3); */
@@ -140,16 +140,10 @@ body {
     /* min-height: 100vh; */
 }
 
-.about .about-text {
+.section-wrap .text-wrap {
     width: 450px;
     color: var(--main-text-color);
     padding: 5rem 1rem 5rem 5rem;
-}
-
-.about .about-image img {
-    height: 400px;
-    width: 450px;
-    padding: 5rem 5rem 5rem 1rem;
 }
 
 /* Portfolio section styles */
@@ -326,6 +320,34 @@ body {
     border: none;
     text-decoration: none;
     color: #fff;
+}
+
+.grid-card {
+    padding: 0px 5rem 0px 5rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+}
+
+.card {
+    min-width: 25rem;
+    font-family: "roboto mono", monospace;
+    font-size: 0.9em;
+    padding: 5px;
+    border: 2px solid var(--main-btn-border-color);
+    box-shadow: 5px 5px 0px 2px var(--main-btn-border-color);
+    transition: all 0.25s;
+}
+
+.card .card-title {
+    padding-left: 2rem;
+    font-weight: bold;
+}
+
+.card .card-body > ul {
+    list-style:none;
+    font-style: italic;
 }
 
 .common-btn {

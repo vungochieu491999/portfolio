@@ -32,17 +32,17 @@
               </a>
             </li>
             <li class="menu-list-items">
-              <a class="links" href="javascript:void(0)" onclick="showSection('about')">
+              <a class="links" href="javascript:void(0)" onclick="showSection('skills')">
                 Skills
               </a>
             </li>
             <li class="menu-list-items">
-              <a class="links" href="javascript:void(0)" onclick="showSection('about')">
-                Experience
+              <a class="links" href="javascript:void(0)" onclick="showSection('services')">
+                Services
               </a>
             </li>
             <li class="menu-list-items">
-              <a class="links" href="javascript:void(0)" onclick="showSection('about')">
+              <a class="links" href="javascript:void(0)" onclick="showSection('contact')">
                 Contact
               </a>
             </li>
@@ -50,8 +50,6 @@
       </div>
     </nav>
   </header>
-
-    <!-- Main hero banner -->
     <section id="home" class="section">
       <div class="hero">
         <div class="intro">
@@ -68,74 +66,120 @@
           </div>
         </div>
         <div class="hero-image">
-          <img src="./img/hiusvu_fb_sticker.webp" alt="About Image">
+          <img src="./img/hiusvu_fb_sticker.webp" alt="Home Image">
         </div>
       </div>
+    </section>
+
+    <section id="about" class="section section-wrap">
+      <div class="text-wrap">
+          <h1 class="my-heading">About Me</h1>
+          <p class="lead-para">
+            Currently, as a Software Engineer with expertise in programming and various extension tools, I
+            possess the ability to adapt flexibly to different projects and automate processes to improve system
+            deployment efficiency. 
+          </p>
+          <p>
+            With a mindset of continuous improvement and innovation, my long-term goal
+            of becoming a Solution Architect within the next 3 years.
+          </p>
+      </div>
+    </section>
+
+    <section id="skills" class="section section-wrap">
+      <div class="text-wrap">
+        <h1 class="my-heading">Skills</h1>
+      </div>
+      <div class="grid-card">
+        <div class="card">
+          <p class="card-title">Backend</p>
+          <div class="card-body">
+            <ul>
+              <li><span>PHP</span></li>
+              <li><span>NodeJS</span></li>
+              <li><span>Python</span></li>
+              <li><span>Deluge</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <p class="card-title">Frontend</p>
+          <div class="card-body">
+            <ul>
+              <li><span>HTML</span></li>
+              <li><span>CSS</span></li>
+              <li><span>Javascript</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <p class="card-title">Databases</p>
+          <div class="card-body">
+            <ul>
+              <li><span>MySQL</span></li>
+              <li><span>MongoDB</span></li>
+              <li><span>PostgreSQL</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <p class="card-title">Version Control Systems</p>
+          <div class="card-body">
+            <ul>
+              <li><span>Github</span></li>
+              <li><span>Gitlab</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <p class="card-title">Operating Systems</p>
+          <div class="card-body">
+            <ul>
+              <li><span>Window</span></li>
+              <li><span>Linux</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <p class="card-title">Others</p>
+          <div class="card-body">
+            <ul>
+              <li><span>HRM</span></li>
+              <li><span>CRM</span></li>
+              <li><span>Zoho Ecosystem</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section section-wrap">
+      <div class="text-wrap">
+        <h1 class="my-heading">Services</h1>
+      </div>
+      <div class="grid-card">
+        <div class="card">
+          <p class="card-title">Web Design</p>
+          <div class="card-body">
+            <p style="padding-left:2rem">
+              Web development refers to the creating, building, and maintaining of websites. 
+              It includes aspects such as web design, web publishing, web programming, and database management. 
+              It is the creation of an application that works over the internet i.e. websites.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-wrap">
+      <div class="text-wrap">
+        <h1 class="my-heading">Contact</h1>
+      </div>
+      <div class="grid-card">
         
+      </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about section">
-        <div class="about-text">
-            <h1 class="my-heading">About Me</h1>
-            <p class="lead-para">
-              Currently, as a Software Engineer with expertise in programming and various extension tools, I
-              possess the ability to adapt flexibly to different projects and automate processes to improve system
-              deployment efficiency. 
-            </p>
-            <p>
-              With a mindset of continuous improvement and innovation, my long-term goal
-              of becoming a Solution Architect within the next 3 years.
-            </p>
-        </div>
-        <div class="about-image">
-            <!-- <img src="./img/character.png" alt="About Image"> -->
-        </div>
-    </section>
-
-    <script  type="text/javascript">
-      const hamburger = document.getElementById('hamburger');
-      const menu = document.querySelector('.menu');
-      hamburger.addEventListener('click', function () {
-          const mobileMenu = this.querySelector('.mobile-menu-btn');
-          if (mobileMenu.style.display === "none") {
-              mobileMenu.style.display = "inline-block"
-              menu.style.display = "none"
-          }
-          else if(menu.style.display === "none") {
-              menu.style.display = "block"
-          } else {
-              menu.style.display = "none"
-          }
-      });
-
-      function showSection(sectionId) {
-        // Hide all sections
-        const sections = document.querySelectorAll('.section');
-        sections.forEach(section => {
-          section.style.display = 'none';
-        });
-
-        // Show the selected section
-        const activeSection = document.getElementById(sectionId);
-        if (activeSection) {
-          activeSection.style.display = 'block';
-        }
-
-        const hamburger = document.getElementById('hamburger');
-        const hamburgerDisplay = window.getComputedStyle(hamburger).display;
-        if (hamburgerDisplay === "none") {
-          menu.style.display = "block"
-        } else {
-          menu.style.display = "none"
-        }
-      }
-
-      // Set default section to display
-      document.addEventListener('DOMContentLoaded', () => {
-        showSection('home');
-      });
-    </script>
+    <script src="./js/script.js"></script>
 </body>
-
 </html>

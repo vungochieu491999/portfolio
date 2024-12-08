@@ -44,16 +44,11 @@
         padding: 0;
     }
 
-    .about {
+    .section-wrap {
         flex-direction: column;
     }
 
-    .about .about-text {
-        width: 90%;
-        padding: 1rem;
-    }
-
-    .about .about-image img {
+    .section-wrap .text-wrap {
         width: 90%;
         padding: 1rem;
     }
@@ -123,5 +118,23 @@
 
     .footer-list-items {
         margin: 0;
+    }
+
+    .grid-card {
+        padding: 0px 1rem 0px 1rem;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: auto;
+        justify-content: space-evenly;
+    }
+
+    .card {
+        min-width: 280px;
+        font-family: "roboto mono", monospace;
+        font-size: 0.9em;
+        padding: 5px;
+        border: 2px solid var(--main-btn-border-color);
+        box-shadow: 5px 5px 0px 2px var(--main-btn-border-color);
+        transition: all 0.25s;
     }
 }
