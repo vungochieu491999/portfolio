@@ -59,17 +59,16 @@
 
     .hero {
         flex-direction: column;
-        gap: 10px; /* Giảm khoảng cách giữa các phần tử trong .hero */
+        gap: 1px;
     }
 
     .hero .intro {
-        padding: 10rem 0px;  /* Giảm khoảng cách giữa intro và hero image */
-        padding-bottom: 10px;  /* Giảm khoảng cách phía dưới của intro */
+        padding: 4rem 0px 2rem 0px;
     }
 
     .hero .hero-image img {
         padding: 1rem;
-        padding-bottom: 5rem;  /* Giảm khoảng cách phía dưới của intro */
+        padding-bottom: 6rem;
     }
 
     .services {
