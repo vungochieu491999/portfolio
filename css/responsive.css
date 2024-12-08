@@ -8,12 +8,9 @@
         background-position: center;
     }
 
-    .sub-heading {
-        color: #fff9f9cc;
-    }
-
     .hero .intro-buttons {
         gap: 20px;
+        flex-direction: column;
     }
 
     .btn {
@@ -21,7 +18,7 @@
     }
 
     .logo {
-        padding: 0 2rem;
+        padding: 0 1rem;
     }
 
     .menu {
@@ -64,6 +61,7 @@
     .hero {
         flex-direction: column;
         gap: 1px;
+        max-height: 100%;
     }
 
     .hero .intro {
