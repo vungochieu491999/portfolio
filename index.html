@@ -17,33 +17,32 @@
           <h2 class="logo-heading">Hiusvu</h2>
       </div>
       <div class="hamburger" id="hamburger">
-          <i class="fas fa-bars hamburger-icon"></i>
-          <i class="fas fa-times cross-icon"></i>
+        <a href="#" class="btn common-btn mobile-menu-btn">Menu</a>
       </div>
       <div class="menu">
         <ul class="menu-list">
             <li class="menu-list-items">
-              <a class="links" href="#home">
+              <a class="links" href="#home" onclick="showSection('home')">
                 Home
               </a>
             </li>
             <li class="menu-list-items">
-              <a class="links" href="#about">
+              <a class="links" href="#about" onclick="showSection('about')">
                 About
               </a>
             </li>
             <li class="menu-list-items">
-              <a class="links" href="#about">
+              <a class="links" href="#about" onclick="showSection('about')">
                 Skills
               </a>
             </li>
             <li class="menu-list-items">
-              <a class="links" href="#about">
+              <a class="links" href="#about" onclick="showSection('about')">
                 Experience
               </a>
             </li>
             <li class="menu-list-items">
-              <a class="links" href="#about">
+              <a class="links" href="#about" onclick="showSection('about')">
                 Contact
               </a>
             </li>
@@ -53,27 +52,30 @@
   </header>
 
     <!-- Main hero banner -->
-    <section id="home" class="hero">
+    <section id="home" class="section">
+      <div class="hero">
         <div class="intro">
-            <div class="headings">
-                <h3 class="greet-heading">Hello, I'm</h3>
-                <h1 class="my-heading">Hiusvu</h1>
-                <h4 class="sub-heading">
-                    A Software Engineer with 3 years of Experience.
-                </h4>
-            </div>
-            <div class="intro-buttons">
-                <a href="#" class="btn common-btn">Hire Me</a>
-                <a href="#" class="btn ghost-btn">Get Resume</a>
-            </div>
+          <div class="headings">
+              <h3 class="greet-heading">Hello, I'm</h3>
+              <h1 class="my-heading">Hiusvu</h1>
+              <h4 class="sub-heading">
+                  A Software Engineer with 3 years of Experience.
+              </h4>
+          </div>
+          <div class="intro-buttons">
+              <a href="#" class="btn common-btn">Hire Me</a>
+              <a href="#" class="btn ghost-btn">Get Resume</a>
+          </div>
         </div>
         <div class="hero-image">
-          <img src="./img/character.png" alt="About Image">
+          <img src="./img/hiusvu_fb_sticker.webp" alt="About Image">
         </div>
+      </div>
+        
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="about section">
         <div class="about-text">
             <h1 class="my-heading">About Me</h1>
             <p class="lead-para">
@@ -91,7 +93,49 @@
         </div>
     </section>
 
-    <script src="./js/script.js"></script>
+    <script  type="text/javascript">
+      const hamburger = document.getElementById('hamburger');
+      const menu = document.querySelector('.menu');
+      hamburger.addEventListener('click', function () {
+          const mobileMenu = this.querySelector('.mobile-menu-btn');
+          if (mobileMenu.style.display === "none") {
+              mobileMenu.style.display = "inline-block"
+              menu.style.display = "none"
+          }
+          else if(menu.style.display === "none") {
+              menu.style.display = "block"
+          } else {
+              menu.style.display = "none"
+          }
+      });
+
+      function showSection(sectionId) {
+        // Hide all sections
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(section => {
+          section.style.display = 'none';
+        });
+
+        // Show the selected section
+        const activeSection = document.getElementById(sectionId);
+        if (activeSection) {
+          activeSection.style.display = 'block';
+        }
+
+        const hamburger = document.getElementById('hamburger');
+        const hamburgerDisplay = window.getComputedStyle(hamburger).display;
+        if (hamburgerDisplay === "none") {
+          menu.style.display = "block"
+        } else {
+          menu.style.display = "none"
+        }
+      }
+
+      // Set default section to display
+      document.addEventListener('DOMContentLoaded', () => {
+        showSection('home');
+      });
+    </script>
 </body>
 
 </html>

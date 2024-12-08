@@ -20,13 +20,15 @@ body {
     background-color: var(--main-theme-color);
 }
 
+#home {
+    margin: 5rem;
+}
+
 /* Header Navbar Styles */
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: fixed;
-    top: 0;
     width: 100%;
 }
 
@@ -90,11 +92,10 @@ body {
 /* Main Hero Section Styles */
 .hero {
     width: 100%;
-    min-height: 100vh;
+    max-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 4.8rem 0;
 }
 
 .hero .intro {
@@ -109,10 +110,18 @@ body {
     justify-content: space-evenly;
 }
 
+.hero .hero-image {
+    margin: 5rem;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .hero .hero-image img {
-    height: 400px;
-    width: 90%;
-    padding: 5rem 5rem 5rem 1rem;
+    height: auto;
+    width: 50%;
+    max-width: 100%;
 }
 
 @media screen and (min-width: 856px) and (max-width: 1024px) {
@@ -128,7 +137,7 @@ body {
     /* background-image: linear-gradient(45deg, #363D73, #2794B3); */
     justify-content: space-between;
     width: 100%;
-    min-height: 100vh;
+    /* min-height: 100vh; */
 }
 
 .about .about-text {
